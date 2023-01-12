@@ -17,9 +17,12 @@ class movie {
         $this->cash = $cash;
 
 
-        echo 
-
     }
+
+    public function getTitle() {
+
+        echo $this->title; 
+      } 
 
     
 
