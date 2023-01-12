@@ -8,13 +8,16 @@ class movie {
     public $duration;
     protected $cash;
 
-    public function __construct($title, $year, $category, $duration= null, $cash= null )
+    public function __construct($title, $year, $category, $duration= 0, $cash= 0 )
     {
         $this->title = $title;
         $this->year = $year;
         $this->category = $category;
         $this->duration = $duration;
         $this->cash = $cash;
+
+
+        echo 
 
     }
 
