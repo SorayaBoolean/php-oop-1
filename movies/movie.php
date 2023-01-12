@@ -5,10 +5,10 @@ class movie {
     public $title;
     public $year;
     public $category;
-    public $duration=null;
-    protected $cash=null;
+    public $duration;
+    protected $cash;
 
-    public function __construct($title, $year, $category, $duration, $cash )
+    public function __construct($title, $year, $category, $duration= null, $cash= null )
     {
         $this->title = $title;
         $this->year = $year;
