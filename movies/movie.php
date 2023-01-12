@@ -5,8 +5,8 @@ class movie {
     public $title;
     public $year;
     public $category;
-    public $duration;
-    protected $cash;
+    public $duration=null;
+    protected $cash=null;
 
     public function __construct($title, $year, $category, $duration, $cash )
     {
@@ -18,7 +18,7 @@ class movie {
 
     }
 
-
+    
 
 
 }
