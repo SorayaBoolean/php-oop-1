@@ -3,29 +3,43 @@
 class movie {
 
     public $title;
-    public $year;
+    protected $year;
     public $category;
     public $duration;
     protected $cash;
 
-    public function __construct($title, $year, $category, $duration= 0, $cash= 0 )
+    public function __construct($title, $category, $cash= 0 )
     {
         $this->title = $title;
-        $this->year = $year;
         $this->category = $category;
-        $this->duration = $duration;
         $this->cash = $cash;
-
 
     }
 
-    public function getTitle() {
+    public function setYear($year) {
+        if (is_int($year) && $year >= 1895 && $year < 2050){
+            $this->year = $year;
+        }
+    }
 
-        echo $this->title; 
+    public function setDuration($duration) {
+        if (is_int($duration) && $duration >= 60 && $duration < 320){
+            $this->duration = $duration;
+        }else{
+          die();
+        }
+    }
+
+    public function getYear() {
+        return $this->year; 
       } 
 
-    
-
+    public function getMovieInfo(){
+        return
+        'Title:'.$this->title.'<br>'.
+        'Category:'.$this->category. '<br>'.
+        'Year:'.$this->year.'<br>';
+      }
 
 }
 ?>
