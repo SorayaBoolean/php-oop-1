@@ -3,7 +3,14 @@
 require_once __DIR__ .'/movie.php';
 
 $movie1 = new movie ("Avatar", "Fantasy", "2922917914");
-$movie1->setYear(2010);
+
+try {
+    $movie1->setYear(208);
+}catch (Exception $e) {
+    echo "Eccezione:". $e->getMessage(). "<br>";
+};
+
+
 $movie1->setDuration(130);
 
 echo $movie1->getMovieInfo();

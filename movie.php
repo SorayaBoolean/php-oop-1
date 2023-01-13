@@ -19,6 +19,8 @@ class movie {
     public function setYear($year) {
         if (is_int($year) && $year >= 1895 && $year < 2050){
             $this->year = $year;
+        } else{
+            throw new Exception ('Is not a number');
         }
     }
 
